@@ -2,7 +2,8 @@
 
 ## Description
 
-This repository contains all the files necessary for generating presentation slides using [VueJS](https://vuejs.org/) and [EagleJS](https://github.com/Zulko/eagle.js).
+This repository contains all the files necessary for generating presentation slides using [VueJS](https://vuejs.org/) and [EagleJS](https://github.com/Zulko/eagle.js). An example can be found [here](https://christian-nils.github.io/phd_presentation).
+
 The structure of this template was based on the presentation slides created by [JiriChara](https://github.com/JiriChara/the-past-present-and-future-of-javascript).
 
 The VueJS app uses the following VueJS components and modules:
