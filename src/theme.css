@@ -260,10 +260,10 @@
   }
   
   /* Menu styling */
-  .bm-menu {
+  /*.bm-menu {
     background-image: url("./assets/png/escheresque_ste.png");
     font-family: "Source Code Pro", Courier;
-  }
+  }*/
   
   .bm-item-list a {
     padding: .1em;
