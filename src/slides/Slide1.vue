@@ -1,15 +1,16 @@
 <template lang="pug">
-    
+    div
+      h1 Hello World!
 </template>
 
 <script>
 export default {
-  name: "Blank"
+  name: "FirstPage"
 };
 </script>
 
-<style scoped>
-.slide-Blank {
+<style>
+.slide-FirstPage {
   background-color: black;
 }
 </style>
