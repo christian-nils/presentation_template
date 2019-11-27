@@ -17,7 +17,7 @@ Note (maybe it sounds unnecessary for most of you): When defining static data su
 
 ### Project configuration
 
-1. Change the web page path in `vue.config.js` and in `deploy.sh`, _presentation_template_ to _github_pages_repository_ (e.g., _phd_presentation_)
+1. Change the web page path in `vue.config.js` and in `deploy.sh`, _presentation_template_ to _github_pages_repository_ (e.g., _phd_presentation_), do not forget to modify your github username as well in `deploy.sh`.
 2. Make the file `deploy.sh` executable,
 
 ```
