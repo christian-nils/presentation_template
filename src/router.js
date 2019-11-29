@@ -18,7 +18,7 @@ const routes = store.state.slides.map(slide => {
 Vue.use(Router);
 
 export default new Router({
-  mode: "history",
+  mode: "hash", // to use history mode, you need to read https://router.vuejs.org/guide/essentials/history-mode.html#example-server-configurations the easiest here is to keep HASH for GitHub pages
   base: process.env.BASE_URL,
   routes
 });
