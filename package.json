@@ -15,7 +15,7 @@
     "vue": "^2.6.12",
     "vue-burger-menu": "^2.0.5",
     "vue-router": "^3.4.7",
-    "vue-svg-loader": "^0.12.0",
+    "vue-svg-loader": "^0.16.0",
     "vuex": "^3.5.1"
   },
   "devDependencies": {
