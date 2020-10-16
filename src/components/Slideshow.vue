@@ -13,6 +13,7 @@
         v-bind:key="slide.id"
       )
         router-view(v-bind:step="step")
+
 </template>
 
 <script>
@@ -74,11 +75,12 @@ export default {
 
     updateUrl(step) {
       const { name } = this.availableSlides[step - 1];
-
       if (name) {
-        this.$router.push({
-          name,
-        });
+        this.$router
+          .push({
+            name,
+          })
+          .catch(() => {});
       }
     },
 

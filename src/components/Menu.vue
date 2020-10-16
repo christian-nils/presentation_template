@@ -58,9 +58,11 @@ export default {
       const { name } = this.availableSlides[step - 1];
 
       if (name) {
-        this.$router.push({
-          name,
-        });
+        this.$router
+          .push({
+            name,
+          })
+          .catch(() => {});
       }
     },
 
