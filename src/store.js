@@ -17,6 +17,16 @@ export default new Vuex.Store({
         leavePrev: "fadeOut",
         steps: 1,
       },
+      {
+        name: "Slide2",
+        menuName: "2nd page",
+        path: "/slide",
+        enterNext: "fadeIn",
+        enterPrev: "fadeIn",
+        leaveNext: "rotateOutDownLeft",
+        leavePrev: "fadeOut",
+        steps: 1,
+      },
     ],
   },
 
