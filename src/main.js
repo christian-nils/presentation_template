@@ -2,7 +2,7 @@ import Vue from "vue";
 import App from "./App";
 
 import Eagle, { Options, CodeBlock } from "eagle.js";
-import "animate.css";
+import "animate.css/animate.compat.css";
 import hljs from "highlight.js";
 
 import router from "@/router";
