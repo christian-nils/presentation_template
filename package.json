@@ -11,7 +11,7 @@
     "animate.css": "^4.1.1",
     "core-js": "^3.6.5",
     "eagle.js": "^0.6.1",
-    "highlight.js": "^9.18.3",
+    "highlight.js": "^10.2.1",
     "vue": "^2.6.12",
     "vue-burger-menu": "^2.0.5",
     "vue-router": "^3.4.7",
