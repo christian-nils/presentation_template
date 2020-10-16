@@ -5,7 +5,7 @@
 
 <script>
 export default {
-  name: "FirstPage"
+  name: "FirstPage",
 };
 </script>
 

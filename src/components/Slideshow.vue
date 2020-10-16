@@ -13,6 +13,7 @@
         v-bind:key="slide.id"
       )
         router-view(v-bind:step="step")
+
 </template>
 
 <script>
@@ -24,25 +25,25 @@ export default {
 
   computed: {
     ...mapState({
-      availableSlides: "slides"
-    })
+      availableSlides: "slides",
+    }),
   },
 
   watch: {
     currentSlideIndex: "updateUrl",
 
-    $route: "updateSlides"
+    $route: "updateSlides",
   },
 
   methods: {
-    getTransition: function(slide, type) {
+    getTransition: function (slide, type) {
       const defaultTransitions = {
         enter: "fadeIn",
         leave: "fadeOut",
         enterPrev: "fadeInLeft",
         enterNext: "fadeInRight",
         leavePrev: "fadeOutRight",
-        leaveNext: "fadeOutLeft"
+        leaveNext: "fadeOutLeft",
       };
 
       switch (type) {
@@ -69,26 +70,28 @@ export default {
       }
     },
     ...mapMutations({
-      setCurrentIndex: "setCurrent"
+      setCurrentIndex: "setCurrent",
     }),
 
     updateUrl(step) {
       const { name } = this.availableSlides[step - 1];
-
       if (name) {
-        this.$router.push({
-          name
-        });
+        this.$router
+          .push({
+            name,
+          })
+          .catch(() => {});
       }
     },
 
     updateSlides(route) {
       const index =
-        this.availableSlides.findIndex(slide => slide.name === route.name) + 1;
+        this.availableSlides.findIndex((slide) => slide.name === route.name) +
+        1;
 
       this.setCurrentIndex(index);
       this.currentSlideIndex = index;
-    }
-  }
+    },
+  },
 };
 </script>
