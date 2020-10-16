@@ -16,7 +16,7 @@ import {
   Reveal,
   ScaleDown,
   ScaleRotate,
-  Stack
+  Stack,
 } from "vue-burger-menu";
 import { mapState, mapMutations } from "vuex";
 
@@ -32,26 +32,26 @@ export default {
     Reveal,
     ScaleDown,
     ScaleRotate,
-    Stack
+    Stack,
   },
   props: { type: { type: String, required: true, default: "Slide" } },
   computed: {
     ...mapState({
-      availableSlides: "slides"
+      availableSlides: "slides",
     }),
-    currentMenu: function() {
+    currentMenu: function () {
       return this.$props.type;
-    }
+    },
   },
   watch: {
     currentSlideIndex: "updateUrl",
 
-    $route: "updateSlides"
+    $route: "updateSlides",
   },
 
   methods: {
     ...mapMutations({
-      setCurrentIndex: "setCurrent"
+      setCurrentIndex: "setCurrent",
     }),
 
     updateUrl(step) {
@@ -59,19 +59,20 @@ export default {
 
       if (name) {
         this.$router.push({
-          name
+          name,
         });
       }
     },
 
     updateSlides(route) {
       const index =
-        this.availableSlides.findIndex(slide => slide.name === route.name) + 1;
+        this.availableSlides.findIndex((slide) => slide.name === route.name) +
+        1;
 
       this.setCurrentIndex(index);
       this.currentSlideIndex = index;
-    }
-  }
+    },
+  },
 };
 </script>
 

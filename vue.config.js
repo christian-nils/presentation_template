@@ -2,7 +2,7 @@
 module.exports = {
   publicPath:
     process.env.NODE_ENV === "production" ? "/presentation_template/" : "/",
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     const svgRule = config.module.rule("svg");
 
     svgRule.uses.clear();
@@ -12,15 +12,18 @@ module.exports = {
       .loader("vue-svg-loader")
       .options({
         svgo: {
-          plugins: [{ cleanupIDs: false }, { removeUnknownsAndDefaults: false }]
-        }
+          plugins: [
+            { cleanupIDs: false },
+            { removeUnknownsAndDefaults: false },
+          ],
+        },
       });
 
     config.module
       .rule("vue")
       .use("vue-loader")
-      .tap(args => {
+      .tap((args) => {
         args.compilerOptions.whitespace = "preserve";
       });
-  }
+  },
 };

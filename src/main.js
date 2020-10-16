@@ -20,5 +20,5 @@ new Vue({
   store,
   el: "#app",
   components: { App },
-  render: h => h("App")
+  render: (h) => h("App"),
 });

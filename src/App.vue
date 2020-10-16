@@ -15,11 +15,11 @@ import Slideshow from "@/components/Slideshow.vue";
 export default {
   components: {
     Slideshow,
-    Menu
+    Menu,
   },
   methods: {
-    onEndExit() {}
-  }
+    onEndExit() {},
+  },
 };
 </script>
 

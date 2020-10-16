@@ -24,25 +24,25 @@ export default {
 
   computed: {
     ...mapState({
-      availableSlides: "slides"
-    })
+      availableSlides: "slides",
+    }),
   },
 
   watch: {
     currentSlideIndex: "updateUrl",
 
-    $route: "updateSlides"
+    $route: "updateSlides",
   },
 
   methods: {
-    getTransition: function(slide, type) {
+    getTransition: function (slide, type) {
       const defaultTransitions = {
         enter: "fadeIn",
         leave: "fadeOut",
         enterPrev: "fadeInLeft",
         enterNext: "fadeInRight",
         leavePrev: "fadeOutRight",
-        leaveNext: "fadeOutLeft"
+        leaveNext: "fadeOutLeft",
       };
 
       switch (type) {
@@ -69,7 +69,7 @@ export default {
       }
     },
     ...mapMutations({
-      setCurrentIndex: "setCurrent"
+      setCurrentIndex: "setCurrent",
     }),
 
     updateUrl(step) {
@@ -77,18 +77,19 @@ export default {
 
       if (name) {
         this.$router.push({
-          name
+          name,
         });
       }
     },
 
     updateSlides(route) {
       const index =
-        this.availableSlides.findIndex(slide => slide.name === route.name) + 1;
+        this.availableSlides.findIndex((slide) => slide.name === route.name) +
+        1;
 
       this.setCurrentIndex(index);
       this.currentSlideIndex = index;
-    }
-  }
+    },
+  },
 };
 </script>

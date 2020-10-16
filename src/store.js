@@ -15,16 +15,16 @@ export default new Vuex.Store({
         enterPrev: "fadeIn",
         leaveNext: "rotateOutDownLeft",
         leavePrev: "fadeOut",
-        steps: 1
-      }
-    ]
+        steps: 1,
+      },
+    ],
   },
 
   /* eslint-disable no-param-reassign */
   mutations: {
     setCurrent(state, index) {
       state.currentIndex = index;
-    }
-  }
+    },
+  },
   /* eslint-enable no-param-reassign */
 });
